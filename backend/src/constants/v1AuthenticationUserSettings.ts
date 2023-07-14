@@ -1,0 +1,1 @@
+export const DEFAULT_PROFILE_PICTURE: string = "https://res.cloudinary.com/dgo6vnzjl/image/upload/c_fill,q_50,w_150/v1685085963/default_male_avatar_xkpekq.webp";   // * DEFAULT PROFILE PICTURE OF USER

@@ -1,0 +1,5 @@
+.flex_container {
+    width: min(100% - 2rem, 1216px);
+    margin: auto;
+    height: 100%;
+}

@@ -1,0 +1,13 @@
+.container {
+    min-height: 100vh;
+    height: auto;
+    background-color: #111827;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+
+.disabledContainer {
+    opacity: 0.5;
+    pointer-events: none;
+}

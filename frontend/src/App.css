@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter';
+}
+
+body {
+    background-color: #111827;
+}
+
+[disabled], .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+[disabled]:hover {
+    cursor: initial !important; /* DEFAULT */
+    opacity: 0.5 !important;
+}

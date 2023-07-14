@@ -1,0 +1,31 @@
+.sso_button_google {
+    background: #111827;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border: 0 solid #e5e7eb;
+    border-width: 1px;
+    border-color: hsl(216 34% 17%);
+    font-size: .875rem;
+    line-height: 1.25rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: 0.1s;
+    font-weight: 500;
+    width: 100%;
+}
+
+.sso_button_google:hover {
+    cursor: pointer;
+    background-color: #1D283A;
+}
+
+.sso_button_google_icon {
+    width: 18px;
+}

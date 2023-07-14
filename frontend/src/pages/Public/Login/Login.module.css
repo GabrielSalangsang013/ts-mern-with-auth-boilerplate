@@ -1,0 +1,179 @@
+.header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 3rem;    
+    align-items: center;
+}
+
+.logo_container {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    object-fit: cover;
+}
+
+.nav_links {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding: 0px 10px;
+    color: #9ba2ae;
+    transition: 0.1s;
+}
+
+.link:hover {
+    color: white;
+}
+
+.login_form {
+    width: 350px;
+    height: 500px;
+    flex-direction: column;
+    display: flex;
+}
+
+.main {
+    margin: 0 auto;
+}
+
+.login_form_title {
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #e1e7ef;
+}
+
+.login_form_subtitle {
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #7A889D;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.login_form_input {
+    background: #111827;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border: 0 solid #e5e7eb;
+    border-width: 1px;
+    border-color: hsl(216 34% 17%);
+    font-size: .875rem;
+    line-height: 1.25rem;
+    height: 2.5rem;
+    width: 100%;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #7A889D;
+}
+
+.login_form_input_error {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin-top: 5px;
+    /* color: rgb(206, 48, 0); */
+    color: rgb(206, 14, 0);
+}
+
+.login_form_submit {
+    background: #F8FAFC;
+    border-radius: 5px;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: 0 solid #e5e7eb;
+    color: rgb(2, 2, 5);
+    font-weight: 500;
+    margin-top: 10px;
+    transition: 0.1s;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 100%;
+}
+
+.login_form_submit[disabled] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 30px;
+}
+
+.login_form_link_forgot_password {
+    margin-top: 20px;
+    display: block;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    text-decoration-line: underline;
+    color: #5DB9FC;
+}
+
+.login_form_submit:hover {
+    opacity: 0.9;
+}
+
+.overline_container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.overline {
+    width: 100%;
+    height: 1px;
+    margin-top: 30px;
+    background-color: hsl(216 34% 17%);
+}
+
+.overline_text {
+    position: relative;
+    text-align: center;
+    top: -12px;
+}
+
+.overline_text > span {
+    background-color: #111827;
+    padding: 0px 10px;
+    font-size: .75rem;
+    line-height: 1rem;
+    color: hsl(215.4 16.3% 56.9%);
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0px 1.5rem;
+    }
+}
