@@ -73,7 +73,7 @@ GOOGLE_IDENITY_SERVICES_CLIENT_ID=
 
 #### 9. After that you will receive a downloaded file which contains the firebase admin key. Open the file and copy all the contents.
 
-#### 10. Now go back in the VS code and go inside the backend project, go to the src/config folder and create firebase-credential.json and paste the Firebase config object.
+#### 10. Now go back in the VS code and go inside the backend project, go to the src/config folder and create firebase-credential.json and paste the Firebase admin key.
 ```
 {
   "type": <The value from the downloaded file>,
