@@ -68,23 +68,25 @@ GOOGLE_IDENITY_SERVICES_CLIENT_ID=
 #### 7. In your firebase project, go to the project settings.
 ![Alt text](screenshots/image-7.png)
 
-#### 8. Click the Config input radio button and copy the Firebase config object (NOTE! ONLY THE VALUE OF THE VARIABLE).
+#### 8. In project settings, go to the "Service accounts" tab, click "Generate new private key" button, and click "Generate key". 
 ![Alt text](screenshots/image-8.png)
 
-#### 9. Now go back in the VS code and go inside the backend project, go to the src/config folder and create firebase-credential.json and paste the Firebase config object.
+#### 9. After that you will receive a downloaded file which contains the firebase admin key. Open the file and copy all the contents.
+
+#### 10. Now go back in the VS code and go inside the backend project, go to the src/config folder and create firebase-credential.json and paste the Firebase config object.
 ```
 {
-  "type": "",
-  "project_id": "",
-  "private_key_id": "",
-  "private_key": "",
-  "client_email": "",
-  "client_id": "",
-  "auth_uri": "",
-  "token_uri": "",
-  "auth_provider_x509_cert_url": "",
-  "client_x509_cert_url": "",
-  "universe_domain": ""
+  "type": <The value from the downloaded file>,
+  "project_id": <The value from the downloaded file>,
+  "private_key_id": <The value from the downloaded file>,
+  "private_key": <The value from the downloaded file>,
+  "client_email": <The value from the downloaded file>,
+  "client_id": <The value from the downloaded file>,
+  "auth_uri": <The value from the downloaded file>,
+  "token_uri": <The value from the downloaded file>,
+  "auth_provider_x509_cert_url": <The value from the downloaded file>,
+  "client_x509_cert_url": <The value from the downloaded file>,
+  "universe_domain": <The value from the downloaded file>
 }
 ```
 
@@ -104,7 +106,7 @@ $ npm install
 REACT_APP_API=http://localhost:4000
 
 # FIREBASE SSO CRENDENTIAL
-(You can get firebase credentials in the project settings also, just click the npm input radio button and copy the firebaseConfig variable value and put it in this .env file)
+(You can get firebase credentials in the project settings also but in "General" tab only. Scroll down and click the npm input radio button and copy the firebaseConfig variable value and put it in this .env file)
 REACT_APP_SSO_FIREBASE_API_KEY=
 REACT_APP_SSO_FIREBASE_AUTH_DOMAIN=
 REACT_APP_SSO_FIREBASE_PROJECT_ID=
@@ -125,7 +127,6 @@ Image where to get the firebase credential in the firebase project settings.
 ```sh
 $ npm start
 ```
-
 
 ### Features:
 - IMPLEMENTED STRONG SECURITY MEASURES
