@@ -200,7 +200,7 @@ const Register = () => {
                                 <CustomInput className={`${style.register_form_input}`} placeholder='Please repeat password' type="password" id="repeatPassword" name="repeatPassword"/>
                                 <ErrorMessage name="repeatPassword" component="div" className={`${style.register_form_input_error}`}/>    
                                 
-                                <CustomInput className={`${style.register_form_input}`} placeholder='Enter your full name' type="fullName" id="fullName" name="fullName"/>
+                                <CustomInput className={`${style.register_form_input}`} placeholder='Enter your full name' type="text" id="fullName" name="fullName"/>
                                 <ErrorMessage name="fullName" component="div" className={`${style.register_form_input_error}`}/>
 
                                 <CustomButton className={`${style.register_form_submit}`} type="submit">Sign Up</CustomButton>

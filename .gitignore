@@ -1,29 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/backend/node_modules
-/frontend/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-/backend/dist
 /frontend/.env
+/frontend/node_modules
+
+/backend/node_modules
+/backend/dist
 /backend/.env
 /backend/src/config/firebase-credential.json
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
