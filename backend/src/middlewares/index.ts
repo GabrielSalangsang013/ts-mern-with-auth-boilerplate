@@ -56,7 +56,7 @@ export function isAuthenticated(req: express.Request, res: express.Response, nex
             res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
                 httpOnly: true, 
                 secure: true, 
-                sameSite: 'strict', 
+                sameSite: 'none', 
                 path: '/', 
                 expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_PUBLIC_CSRF_TOKEN_EXPIRATION)
             });
@@ -71,7 +71,7 @@ export function isAuthenticated(req: express.Request, res: express.Response, nex
             res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, 'expiredtoken', {
                 httpOnly: true,
                 secure: true,
-                sameSite: 'strict', 
+                sameSite: 'none', 
                 path: '/', 
                 expires: new Date(0)
             });
@@ -82,7 +82,7 @@ export function isAuthenticated(req: express.Request, res: express.Response, nex
             res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
                 httpOnly: true, 
                 secure: true, 
-                sameSite: 'strict', 
+                sameSite: 'none', 
                 path: '/', 
                 expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_PUBLIC_CSRF_TOKEN_EXPIRATION)
             });
@@ -101,7 +101,7 @@ export function isAuthenticated(req: express.Request, res: express.Response, nex
             res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, 'expiredtoken', {
                 httpOnly: true,
                 secure: true,
-                sameSite: 'strict', 
+                sameSite: 'none', 
                 path: '/', 
                 expires: new Date(0)
             });
@@ -112,7 +112,7 @@ export function isAuthenticated(req: express.Request, res: express.Response, nex
             res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
                 httpOnly: true, 
                 secure: true, 
-                sameSite: 'strict', 
+                sameSite: 'none', 
                 path: '/', 
                 expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_PUBLIC_CSRF_TOKEN_EXPIRATION)
             });
@@ -151,7 +151,7 @@ export function verifyPublicCSRFToken(req: express.Request, res: express.Respons
         res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
             httpOnly: true, 
             secure: true, 
-            sameSite: 'strict', 
+            sameSite: 'none', 
             path: '/', 
             expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_PUBLIC_CSRF_TOKEN_EXPIRATION)
         });
@@ -167,7 +167,7 @@ export function verifyPublicCSRFToken(req: express.Request, res: express.Respons
         res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
             httpOnly: true, 
             secure: true, 
-            sameSite: 'strict', 
+            sameSite: 'none', 
             path: '/', 
             expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_PUBLIC_CSRF_TOKEN_EXPIRATION)
         });
@@ -190,7 +190,7 @@ export function sendPublicCSRFTokenToUser(req: express.Request, res: express.Res
         res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
             httpOnly: true, 
             secure: true, 
-            sameSite: 'strict', 
+            sameSite: 'none', 
             path: '/', 
             expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_PUBLIC_CSRF_TOKEN_EXPIRATION)
         });

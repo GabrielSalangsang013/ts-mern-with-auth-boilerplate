@@ -90,7 +90,7 @@ const deleteUser = tryCatch(async (req: express.Request, res: express.Response) 
     res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, 'expiredtoken', {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(0)
     });
@@ -98,7 +98,7 @@ const deleteUser = tryCatch(async (req: express.Request, res: express.Response) 
     res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_PUBLIC_CSRF_TOKEN_EXPIRATION)
     });
@@ -187,7 +187,7 @@ const activate = tryCatch(async (req: express.Request, res: express.Response) =>
     res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, authenticationToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
@@ -195,7 +195,7 @@ const activate = tryCatch(async (req: express.Request, res: express.Response) =>
     res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
@@ -257,7 +257,7 @@ const login = tryCatch(async (req: express.Request, res: express.Response) => {
     res.cookie(cookiesSettings.COOKIE_MFA_TOKEN_NAME, mfa_token, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_MFA_LOGIN_TOKEN_EXPIRATION)
     });
@@ -297,7 +297,7 @@ const verificationCodeLogin = tryCatch(async (req: express.Request, res: express
     res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, authenticationToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
@@ -305,7 +305,7 @@ const verificationCodeLogin = tryCatch(async (req: express.Request, res: express
     res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
@@ -313,7 +313,7 @@ const verificationCodeLogin = tryCatch(async (req: express.Request, res: express
     res.cookie(cookiesSettings.COOKIE_MFA_TOKEN_NAME, 'expiredtoken', {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(0)
     });
@@ -325,7 +325,7 @@ const verificationCodeLoginLogout = tryCatch(async (req: express.Request, res: e
     res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, 'expiredtoken', {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict',
+        sameSite: 'none',
         path: '/',
         expires: new Date(0)
     });
@@ -333,7 +333,7 @@ const verificationCodeLoginLogout = tryCatch(async (req: express.Request, res: e
     res.cookie(cookiesSettings.COOKIE_MFA_TOKEN_NAME, 'expiredtoken', {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict',
+        sameSite: 'none',
         path: '/',
         expires: new Date(0)
     });
@@ -349,7 +349,7 @@ const logout = tryCatch(async (req: express.Request, res: express.Response) => {
     res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, 'expiredtoken', {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(0)
     });
@@ -357,7 +357,7 @@ const logout = tryCatch(async (req: express.Request, res: express.Response) => {
     res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_PUBLIC_CSRF_TOKEN_EXPIRATION)
     });
@@ -439,7 +439,7 @@ const googleAuthenticatorCodeLogin = tryCatch(async (req: express.Request, res: 
     res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, authenticationToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
@@ -447,7 +447,7 @@ const googleAuthenticatorCodeLogin = tryCatch(async (req: express.Request, res: 
     res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
@@ -455,7 +455,7 @@ const googleAuthenticatorCodeLogin = tryCatch(async (req: express.Request, res: 
     res.cookie(cookiesSettings.COOKIE_MFA_TOKEN_NAME, 'expiredtoken', {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(0)
     });
@@ -576,7 +576,7 @@ const ssoSignInGoogleIdentityServices = tryCatch(async (req: express.Request, re
             res.cookie('g_state', 'expiredtoken', {
                 httpOnly: true,
                 secure: true,
-                sameSite: 'strict', 
+                sameSite: 'none', 
                 path: '/', 
                 expires: new Date(0)
             });
@@ -634,7 +634,7 @@ const ssoSignInGoogleIdentityServices = tryCatch(async (req: express.Request, re
         res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, authenticationToken, { 
             httpOnly: true, 
             secure: true, 
-            sameSite: 'strict', 
+            sameSite: 'none', 
             path: '/', 
             expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
         });
@@ -642,7 +642,7 @@ const ssoSignInGoogleIdentityServices = tryCatch(async (req: express.Request, re
         res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
             httpOnly: true, 
             secure: true, 
-            sameSite: 'strict', 
+            sameSite: 'none', 
             path: '/', 
             expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
         });
@@ -659,7 +659,7 @@ const ssoSignUpGoogleIdentityServices = tryCatch(async (req: express.Request, re
             res.cookie('g_state', 'expiredtoken', {
                 httpOnly: true,
                 secure: true,
-                sameSite: 'strict', 
+                sameSite: 'none', 
                 path: '/', 
                 expires: new Date(0)
             });
@@ -732,7 +732,7 @@ const ssoSignUpGoogleIdentityServices = tryCatch(async (req: express.Request, re
     res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, authenticationToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
@@ -740,7 +740,7 @@ const ssoSignUpGoogleIdentityServices = tryCatch(async (req: express.Request, re
     res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
@@ -793,7 +793,7 @@ const ssoSignInFirebaseFacebook = tryCatch(async (req: express.Request, res: exp
         res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, authenticationToken, { 
             httpOnly: true, 
             secure: true, 
-            sameSite: 'strict', 
+            sameSite: 'none', 
             path: '/', 
             expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
         });
@@ -801,7 +801,7 @@ const ssoSignInFirebaseFacebook = tryCatch(async (req: express.Request, res: exp
         res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
             httpOnly: true, 
             secure: true, 
-            sameSite: 'strict', 
+            sameSite: 'none', 
             path: '/', 
             expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
         });
@@ -875,7 +875,7 @@ const ssoSignUpFirebaseFacebook = tryCatch(async (req: express.Request, res: exp
     res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, authenticationToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
@@ -883,7 +883,7 @@ const ssoSignUpFirebaseFacebook = tryCatch(async (req: express.Request, res: exp
     res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
@@ -947,7 +947,7 @@ const ssoSignInFirebaseGoogle = tryCatch(async (req: express.Request, res: expre
         res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, authenticationToken, { 
             httpOnly: true, 
             secure: true, 
-            sameSite: 'strict', 
+            sameSite: 'none', 
             path: '/', 
             expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
         });
@@ -955,7 +955,7 @@ const ssoSignInFirebaseGoogle = tryCatch(async (req: express.Request, res: expre
         res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
             httpOnly: true, 
             secure: true, 
-            sameSite: 'strict', 
+            sameSite: 'none', 
             path: '/', 
             expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
         });
@@ -1038,7 +1038,7 @@ const ssoSignUpFirebaseGoogle = tryCatch(async (req: express.Request, res: expre
     res.cookie(cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_NAME, authenticationToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
@@ -1046,7 +1046,7 @@ const ssoSignUpFirebaseGoogle = tryCatch(async (req: express.Request, res: expre
     res.cookie(cookiesSettings.COOKIE_CSRF_TOKEN_NAME, csrfToken, { 
         httpOnly: true, 
         secure: true, 
-        sameSite: 'strict', 
+        sameSite: 'none', 
         path: '/', 
         expires: new Date(new Date().getTime() + cookiesSettings.COOKIE_AUTHENTICATION_TOKEN_EXPIRATION)
     });
