@@ -62,7 +62,7 @@ app.use(mongoSanitize());
 app.use(cookieParser());
 app.use(
   cors({
-      origin: [process.env["REACT_URL"] as string],
+      origin: ['*', process.env["REACT_URL"] as string],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       credentials: true
   })
