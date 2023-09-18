@@ -72,19 +72,10 @@ app.use(
 
 app.use('/api/v1/authentication', v1AuthenticationRouter);
 
-// * -------------------------- DEPLOYMENT ------------------------------
-if (process.env["NODE_ENV"] as string === "PRODUCTION") {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-
-    app.use(express.static(path.join(__dirname, "../frontend/build")));
-    app.get("*", (req: express.Request, res: express.Response) => {
-      return res.sendFile(
-        path.resolve(__dirname, "client", "build", "index.html")
-      );
-    });
-};
-// * -------------------------- DEPLOYMENT ------------------------------
+app.get("*", (req: express.Request, res: express.Response) => {
+    res.writeHead(302, {'Location': `${process.env["REACT_URL"] as string}/home`});
+    res.end();
+});
 
 app.use(errorHandler);
 colors.enable();
