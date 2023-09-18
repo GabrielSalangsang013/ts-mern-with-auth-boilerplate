@@ -1,7 +1,5 @@
 import dotenv from 'dotenv';
 dotenv.config();
-import path from 'path';
-import { fileURLToPath } from 'url';
 import express from 'express';
 import http from 'http';
 import mongoose from 'mongoose';
