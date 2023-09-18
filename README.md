@@ -106,10 +106,11 @@ $ npm install
 
 #### 13. Create .env file and fill up the credentials (still inside frontend folder).
 ```
+# REACT API - BACKEND
 REACT_APP_API=http://localhost:4000
 
 # FIREBASE SSO CRENDENTIAL
-(You can get firebase credentials in the project settings also but in "General" tab only. Scroll down and click the npm input radio button and copy the firebaseConfig variable value and put it in this .env file)
+# (You can get firebase credentials in the project settings also but in "General" tab only. Scroll down and click the npm input radio button and copy the firebaseConfig variable value and put it in this .env file)
 REACT_APP_SSO_FIREBASE_API_KEY=
 REACT_APP_SSO_FIREBASE_AUTH_DOMAIN=
 REACT_APP_SSO_FIREBASE_PROJECT_ID=
@@ -119,7 +120,7 @@ REACT_APP_SSO_FIREBASE_APP_ID=
 REACT_APP_SSO_FIREBASE_MEASUREMENT_ID=
 
 # GOOGLE IDENTITY SERVICES SSO CRENDENTIAL
-(Follow this tutorial on how to create GIS Client ID - [https://youtu.be/HtJKUQXmtok?si=gwlFBdj-vIt-XoSR])
+# (Follow this tutorial on how to create GIS Client ID - [https://youtu.be/HtJKUQXmtok?si=gwlFBdj-vIt-XoSR])
 REACT_APP_SSO_GOOGLE_IDENITY_SERVICES_CLIENT_ID=
 ```
 Image where to get the firebase credential in the firebase project settings.
