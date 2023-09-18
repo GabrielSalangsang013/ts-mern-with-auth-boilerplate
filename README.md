@@ -31,6 +31,9 @@ NODE_ENV=DEVELOPMENT
 # PORT OF SERVER
 PORT=4000
 
+# VERSION OF NODE
+NODE_VERSION=18.16.0
+
 # REACT URL - FRONTEND
 REACT_URL=http://localhost:3000
 
@@ -39,7 +42,7 @@ MONGO_DB_URI=
 MONGO_DB_URI_LIMITER=
 
 # SECRETS
-(Create secret using this code "node require('crypto').randomBytes(64).toString('hex');")
+# (Create secret using this code "node require('crypto').randomBytes(64).toString('hex');")
 AUTHENTICATION_TOKEN_SECRET=
 ACCOUNT_ACTIVATION_TOKEN_SECRET=
 ACCOUNT_RECOVERY_RESET_PASSWORD_TOKEN_SECRET=
@@ -55,11 +58,11 @@ SMTP_PASSWORD=
 EMAIL_FROM=
 
 # GOOGLE AUTHENTICATOR SECRET
-(Create secret using this code "node require('crypto').randomBytes(64).toString('hex');")
+# (Create secret using this code "node require('crypto').randomBytes(64).toString('hex');")
 GOOGLE_AUTHENTICATOR_NAME=MERN-Auth
 
 # SSO GOOGLE IDENTITY SERVICES
-(Follow this tutorial on how to create GIS Client ID - [https://youtu.be/HtJKUQXmtok?si=gwlFBdj-vIt-XoSR])
+# (Follow this tutorial on how to create GIS Client ID - [https://youtu.be/HtJKUQXmtok?si=gwlFBdj-vIt-XoSR])
 GOOGLE_IDENITY_SERVICES_CLIENT_ID=
 ```
 
