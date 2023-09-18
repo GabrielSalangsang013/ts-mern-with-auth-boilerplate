@@ -8,7 +8,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon",
-    "production": "tsc && node dist/server.js"
+    "dev": "nodemon",
+    "build": "tsc",
+    "production": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
